@@ -1,5 +1,5 @@
 # =============================================================================
-# Chapter 40 — Limited Dependent Variables
+# Binary Regression Models: An Average Partial Effects Approach
 # Minimum Detectable Effect Size for Probit (Power Analysis)
 #
 # REQUIRED R PACKAGE (install once):

@@ -3,16 +3,16 @@ layout: default
 title: "Replication Code"
 ---
 
-# Chapter 40: Limited Dependent Variables
+# Binary Regression Models: An Average Partial Effects Approach
 
 **Author:** Jesper N. Wulff
-**Book:** *SAGE Handbook of Quantitative Methods for the Social Sciences* (2nd Edition)
+**Book:** *The SAGE Handbook of Quantitative Research Methods in Business & Management*
 
 ---
 
 ## Overview
 
-This repository contains the replication code for Chapter 40 on limited dependent variables (LDVs). The chapter covers binary regression models including linear probability models (LPM), probit, instrumental variables (IV) estimation, and control-function approaches, with a focus on specification testing, marginal effects, interaction effects, and sensitivity analysis.
+This repository contains the replication code for the chapter on binary regression models. The chapter covers linear probability models (LPM), probit, instrumental variables (IV) estimation, and control-function approaches, with a focus on specification testing, marginal effects, interaction effects, and sensitivity analysis.
 
 ---
 
@@ -22,29 +22,27 @@ This repository contains the replication code for Chapter 40 on limited dependen
 |------|----------|-------------|
 | [`min_effect_probit.R`]({{ site.github.repository_url }}/blob/main/code/min_effect_probit.R) | R | Minimum detectable effect size (power analysis for probit) |
 | [`analysis.do`]({{ site.github.repository_url }}/blob/main/code/analysis.do) | Stata | **Example 1:** LPM and probit with specification tests, marginal effects, interaction effects, and sensitivity analysis |
-| [`analysis_IV.do`]({{ site.github.repository_url }}/blob/main/code/analysis_IV.do) | Stata | **Example 2:** IV/2SLS, IV probit, and control-function probit with diagnostics |
+| [`analysis_IV.do`]({{ site.github.repository_url }}/blob/main/code/analysis_IV.do) | Stata | **Example 2:** 2SLS and control-function probit with diagnostics |
 | [`logit_spec_test.do`]({{ site.github.repository_url }}/blob/main/code/logit_spec_test.do) | Stata | Helper programs for specification testing (sourced automatically by Example 1) |
 
 ---
 
 ## Prerequisites
 
-### Stata (version 17 or later recommended)
+### Stata 19
 
-Install the following community-contributed packages by running these commands in Stata:
+`analysis_IV.do` uses the `cfprobit` command, which is built into Stata 19. Install the following community-contributed packages by running these commands in Stata:
 
 ```stata
 * Packages for Example 1 (analysis.do)
 ssc install estout, replace
-ssc install ginteff, replace
+net install st0711, from("http://www.stata-journal.com/software/sj23-2")
 ssc install sensemakr, replace
-ssc install bootmakr, replace
+net install bootmakr, from("https://raw.githubusercontent.com/jespernwulff/bootmakr-stata/main/") replace
 ssc install spost13_ado, replace
 
 * Additional packages for Example 2 (analysis_IV.do)
 ssc install ivreg2, replace
-ssc install ranktest, replace
-ssc install cfprobit, replace
 ssc install testex, replace
 ssc install twostepweakiv, replace
 ssc install plausexog, replace
@@ -75,7 +73,9 @@ Generated figures will be saved to the `output/` folder.
 
 ## Data
 
-The dataset `master_rev2.dta` is included in the `data/` folder of this repository.
+The dataset `master_rev2.dta` is included in the `data/` folder. The data are from:
+
+Epitropaki O and Avramidis P (2024) Becoming a leader with clipped wings: The role of early-career unemployment scarring on future leadership role occupancy. *The Leadership Quarterly* 35(4): 101786. [https://doi.org/10.1016/j.leaqua.2024.101786](https://doi.org/10.1016/j.leaqua.2024.101786)
 
 ---
 

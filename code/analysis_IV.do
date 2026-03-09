@@ -1,7 +1,7 @@
 * =============================================================================
-* Chapter 40 — Binary Regression Models
+* Binary Regression Models: An Average Partial Effects Approach
 * Example 2: Instrumental Variables / Endogeneity Analysis
-* SAGE Handbook of Quantitative Research Methods in Business and Management
+* The SAGE Handbook of Quantitative Research Methods in Business & Management
 *
 * Companion paper:
 *   https://www.sciencedirect.com/science/article/pii/S1048984324000158
