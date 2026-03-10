@@ -81,4 +81,4 @@ Epitropaki O and Avramidis P (2024) Becoming a leader with clipped wings: The ro
 
 ## Citation
 
-[Citation to be added upon publication.]
+Wulff, J. N. (2026). Binary regression models: An average partial effects approach. In J. R. Busenbark & M. Withers (Eds.), *The SAGE Handbook of Quantitative Research Methods in Business & Management*. SAGE Publications Ltd.
